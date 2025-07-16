@@ -49,22 +49,18 @@ function calculateAggregate() {
 
   let output = `
   <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-    <tr style="background-color: #f0f0f0;">
-      <th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Category</th>
-      <th style="border: 1px solid #ccc; padding: 8px; text-align: right;">Percentage</th>
-    </tr>
     ${!excludeMatric ? `
       <tr>
-        <td style="border: 1px solid #ccc; padding: 8px;">Matric %</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Matric</td>
         <td style="border: 1px solid #ccc; padding: 8px; text-align: right;">${matricPercent.toFixed(2)}%</td>
       </tr>
     ` : ''}
     <tr>
-      <td style="border: 1px solid #ccc; padding: 8px;">FSc %</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">FSc</td>
       <td style="border: 1px solid #ccc; padding: 8px; text-align: right;">${fscPercent.toFixed(2)}%</td>
     </tr>
     <tr>
-      <td style="border: 1px solid #ccc; padding: 8px;">MDCAT %</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">MDCAT</td>
       <td style="border: 1px solid #ccc; padding: 8px; text-align: right;">${mdcatPercent.toFixed(2)}%</td>
     </tr>
     <tr style="background-color: #d4edda;">
