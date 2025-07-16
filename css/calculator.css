@@ -83,3 +83,17 @@ font-weight: bold;
 text-align: center;
 display: none;
 }
+#mcatCalculator .hidden {
+  display: none;
+}
+
+#mcatCalculator .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#mcatCalculator .checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}

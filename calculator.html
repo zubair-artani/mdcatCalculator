@@ -13,19 +13,29 @@
   <p>Unleash your potential! Just enter your marks below.</p>
 
   <div class="form-group">
-    <label for="matricMarks">Matric Marks Obtained</label>
-    <input type="number" id="matricMarks" placeholder="e.g., 990">
+    <label>
+      <input type="checkbox" id="excludeMatric" onchange="toggleMatricFields()" />
+      Exclude Matric Marks
+    </label>
   </div>
-  <div class="form-group">
-    <label for="matricTotal">Matric Total Marks</label>
-    <select id="matricTotal">
-      <option value="">Select Matric Total Marks</option>
-      <option value="900">900</option>
-      <option value="1000">1000</option>
-      <option value="1100">1100</option>
-      <option value="1200">1200</option>
-    </select>
+
+  <div id="matricFields">
+    <div class="form-group">
+      <label for="matricMarks">Matric Marks Obtained</label>
+      <input type="number" id="matricMarks" placeholder="e.g., 990">
+    </div>
+    <div class="form-group">
+      <label for="matricTotal">Matric Total Marks</label>
+      <select id="matricTotal">
+        <option value="">Select Matric Total Marks</option>
+        <option value="900">900</option>
+        <option value="1000">1000</option>
+        <option value="1100">1100</option>
+        <option value="1200">1200</option>
+      </select>
+    </div>
   </div>
+
   <div class="form-group">
     <label for="fscMarks">FSc Marks Obtained</label>
     <input type="number" id="fscMarks" placeholder="e.g., 1000">
@@ -45,7 +55,7 @@
     <input type="number" id="mdcatMarks" placeholder="e.g., 190">
   </div>
   <div class="form-group">
-    <label for="mdcatMarks">MDCAT Total Marks</label>
+    <label for="mdcatTotal">MDCAT Total Marks</label>
     <input type="number" id="mdcatTotal" placeholder="e.g., 210" value="210">
   </div>
 
