@@ -12,8 +12,8 @@ function calculateAggregate() {
   const mdcatMarks = parseFloat(document.getElementById('mdcatMarks').value);
   const mdcatTotal = parseFloat(document.getElementById('mdcatTotal').value);
 
-  let fscPercent = (fscMarks / fscTotal) * 100;
-  let mdcatPercent = (mdcatMarks / mdcatTotal) * 100;
+  let fscPercent = (fscMarks / fscTotal) * 0.40;
+  let mdcatPercent = (mdcatMarks / mdcatTotal) * 0.50;
   let matricPercent = 0;
 
   if (!excludeMatric) {
@@ -29,7 +29,7 @@ function calculateAggregate() {
       return;
     }
 
-    matricPercent = (matricMarks / matricTotal) * 100;
+    matricPercent = (matricMarks / matricTotal) * 0.10;
   } else {
     if (
       isNaN(fscMarks) || isNaN(fscTotal) ||
@@ -47,13 +47,32 @@ function calculateAggregate() {
     aggregate = (matricPercent * 0.10) + (fscPercent * 0.40) + (mdcatPercent * 0.50);
   }
 
-  let output = '';
-  if (!excludeMatric) {
-    output += `Matric %: ${matricPercent.toFixed(2)}%<br>`;
-  }
-  output += `FSc %: ${fscPercent.toFixed(2)}%<br>`;
-  output += `MDCAT %: ${mdcatPercent.toFixed(2)}%<br>`;
-  output += `<strong>Aggregate: ${aggregate.toFixed(2)}%</strong>`;
+  let output = `
+  <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+    <tr style="background-color: #f0f0f0;">
+      <th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Category</th>
+      <th style="border: 1px solid #ccc; padding: 8px; text-align: right;">Percentage</th>
+    </tr>
+    ${!excludeMatric ? `
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;">Matric %</td>
+        <td style="border: 1px solid #ccc; padding: 8px; text-align: right;">${matricPercent.toFixed(2)}%</td>
+      </tr>
+    ` : ''}
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">FSc %</td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: right;">${fscPercent.toFixed(2)}%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">MDCAT %</td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: right;">${mdcatPercent.toFixed(2)}%</td>
+    </tr>
+    <tr style="background-color: #d4edda;">
+      <td style="border: 1px solid #ccc; padding: 8px;"><strong>Aggregate</strong></td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: right;"><strong>${aggregate.toFixed(2)}%</strong></td>
+    </tr>
+  </table>
+`;
 
   const resultDiv = document.getElementById('result');
   resultDiv.style.display = 'block';
