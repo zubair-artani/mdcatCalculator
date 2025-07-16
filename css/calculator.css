@@ -1,0 +1,85 @@
+body {
+font-family: Arial, sans-serif;
+background: #e9f5ee;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+#mcatCalculator.calculator-container {
+background: linear-gradient(to bottom, #6fd38f, #5ac67d);
+padding: 30px 20px;
+border-radius: 12px;
+width: 90%;
+max-width: 400px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+color: #fff;
+}
+#mcatCalculator.calculator-container h2 {
+margin-top: 0;
+text-align: center;
+}
+#mcatCalculator.calculator-container p {
+text-align: center;
+font-size: 14px;
+margin-bottom: 25px;
+}
+#mcatCalculator .form-group {
+margin-bottom: 15px;
+}
+#mcatCalculator .form-group input {
+width: 100%;
+padding: 10px;
+border-radius: 6px;
+border: none;
+outline: none;
+font-size: 16px;
+box-sizing: border-box;
+}
+#mcatCalculator .form-group select {
+width: 100%;
+padding: 10px;
+border-radius: 6px;
+border: none;
+outline: none;
+font-size: 16px;
+color: #333;
+}
+#mcatCalculator .form-group input::placeholder {
+color: #999;
+}
+#mcatCalculator .btn-group {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+#mcatCalculator button {
+flex: 1;
+padding: 10px;
+font-size: 16px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+margin: 0 5px;
+}
+#mcatCalculator .calculate-btn {
+background-color: #ffffff;
+color: #28a745;
+font-weight: bold;
+}
+#mcatCalculator .reset-btn {
+background-color: #cccccc;
+color: #333;
+}
+#mcatCalculator #result {
+margin-top: 20px;
+background: #ffffff;
+color: #28a745;
+padding: 12px;
+border-radius: 8px;
+font-weight: bold;
+text-align: center;
+display: none;
+}

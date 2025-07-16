@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDCAT Aggregate Calculator</title>
+  <link rel="stylesheet" href="css/calculator.css">
+</head>
+<body>
+
+<div class="calculator-container" id="mcatCalculator">
+  <h2>MDCAT Aggregate Calculator</h2>
+  <p>Unleash your potential! Just enter your marks below.</p>
+
+  <div class="form-group">
+    <label for="matricMarks">Matric Marks Obtained</label>
+    <input type="number" id="matricMarks" placeholder="e.g., 990">
+  </div>
+  <div class="form-group">
+    <label for="matricTotal">Matric Total Marks</label>
+    <select id="matricTotal">
+      <option value="">Select Matric Total Marks</option>
+      <option value="900">900</option>
+      <option value="1000">1000</option>
+      <option value="1100">1100</option>
+      <option value="1200">1200</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="fscMarks">FSc Marks Obtained</label>
+    <input type="number" id="fscMarks" placeholder="e.g., 1000">
+  </div>
+  <div class="form-group">
+    <label for="fscTotal">FSc Total Marks</label>
+    <select id="fscTotal">
+      <option value="">Select FSc Total Marks</option>
+      <option value="900">900</option>
+      <option value="1000">1000</option>
+      <option value="1100">1100</option>
+      <option value="1200">1200</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="mdcatMarks">MDCAT Marks Obtained</label>
+    <input type="number" id="mdcatMarks" placeholder="e.g., 190">
+  </div>
+  <div class="form-group">
+    <label for="mdcatMarks">MDCAT Total Marks</label>
+    <input type="number" id="mdcatTotal" placeholder="e.g., 210" value="210">
+  </div>
+
+  <div class="btn-group">
+    <button class="calculate-btn" onclick="calculateAggregate()">Calculate Aggregate</button>
+    <button class="reset-btn" onclick="resetFields()">Reset</button>
+  </div>
+
+  <div id="result"></div>
+</div>
+
+<script src="js/calculator.js"></script>
+</body>
+</html>
